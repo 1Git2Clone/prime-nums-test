@@ -10,7 +10,7 @@ Minimal compiling options (for g++ on the **ROOT** directory of the **REPOSITORY
 - -ftemplate-depth=PRIME_UPPER_LIMIT+1 -> this needs to be the minimum value.
 
 ```
-g++ src/main.cpp -o bin/test -march=native -Ofast -mavx -ftemplate-depth=1001
+g++ src/main.cpp -o bin/test -march=native -mavx -ftemplate-depth=1001 -Ofast
 ```
 
 The **-Ofast** flag for g++ is optional.
