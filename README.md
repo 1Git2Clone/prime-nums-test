@@ -6,13 +6,22 @@
 
 ### Setting up
 
-Minimal compiling options (for g++ -> -ftemplate-depth=PRIME_UPPER_LIMIT+1):
+Minimal compiling options (for g++ on the **ROOT** directory of the **REPOSITORY**):
+- -ftemplate-depth=PRIME_UPPER_LIMIT+1 -> this needs to be the minimum value.
 
 ```
 g++ src/main.cpp -o bin/test -march=native -Ofast -mavx -ftemplate-depth=1001
 ```
 
 The **-Ofast** flag for g++ is optional.
+
+```
+g++ src/main.cpp -o bin/test -march=native -mavx -ftemplate-depth=1001
+```
+
+
+No **-Ofast** variant.
+
 
 Running variations:
 - **-eval** (-e) flag runs the barebones unoptimized solution.
