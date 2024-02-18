@@ -8,6 +8,8 @@
 // This can't be solved on compile time
 // because std::vector requires runtime memory sequence handling.
 // - "It's not a bug, it's a feature."
+
+// O(n^2) - monke solution
 std::vector<int> evalPrimes(int n) {
   std::vector<int> res;
   // 1 isn't a prime number by definition

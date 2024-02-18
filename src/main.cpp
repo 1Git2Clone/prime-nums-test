@@ -2,6 +2,7 @@
 
 #include "./definitions/definitions.hpp"
 
+#include "./utils/sieve-of-eratisthenes.cpp"
 #include "./utils/simd-vector-primes.cpp"
 #include "./utils/static-unoptimized-templating.cpp"
 #include "./utils/vector-primes.cpp"
@@ -12,7 +13,8 @@
 int main(int argc, char **argv) {
   if (argc < 2) {
     std::cerr << "Usage: " << argv[0]
-              << "-eval (-e) | -simd-eval (-se) | -constexpr-eval (-ce)\n";
+              << "-eval (-e) | -simd-eval (-se) | -sieve-of-eratosthenes "
+                 "(-soe) | -constexpr-eval (-ce)\n";
     return 1;
   }
 
@@ -22,6 +24,8 @@ int main(int argc, char **argv) {
 
   if (option == "-eval" || option == "-e") {
     printEvalPrimes(PRIME_UPPER_LIMIT);
+  } else if (option == "-sieve-of-eratosthenes" || option == "-soe") {
+    printSieveOfEratosthenes(PRIME_UPPER_LIMIT);
   } else if (option == "-simd-eval" || option == "-se") {
     printEvalPrimesVectorized(PRIME_UPPER_LIMIT);
   } else if (option == "-constexpr-eval" || option == "-ce") {
