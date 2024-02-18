@@ -25,8 +25,8 @@ No **-Ofast** variant.
 
 Running variations:
 - **-eval** (-e) flag runs the barebones unoptimized solution.
-- **-sieve-of-eratosthenes** (-soe) flag runs a more optimized version using modulo math
-- **-simd-eval** (-se) flag runs the same -soe flag but with AVX2 (**NOT WORKING FOR NOW!**)
+- **-sieve-of-eratosthenes** (-soe) flag runs a more optimized version using modulo math. ([wikipedia.org](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes))
+- **-simd-eval** (-se) flag runs the same -soe flag but with AVX2 (**NOT WORKING FOR NOW!**).
 - **-constexpr-eval** (-ce) flag is the reason why your compile times are slow. It runs on compile time instead of runtime. On runtime it just gets printed.
 
 ### Additional details
